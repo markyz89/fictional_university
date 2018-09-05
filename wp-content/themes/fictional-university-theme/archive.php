@@ -1,10 +1,17 @@
 <?php
 get_header();
-
+pageBanner(array(
+  'title' => get_the_archive_title(),
+  'subtitle' => get_the_archive_description()
+));
 ?>
 
-<div class="page-banner">
-    <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg'); ?>);"></div>
+
+<!-- PHP code below kept because it uses if statments to achieve a more custom version of the archive titles
+eg instead of 'category: Awards' it just says 'Awards' -->
+
+<!--  <div class="page-banner">
+    <div class="page-banner__bg-image" style="background-image: url(<?php /* echo get_theme_file_uri('/images/ocean.jpg'); ?>);"></div>
     <div class="page-banner__content container container--narrow">
       <h1 class="page-banner__title"><?php if(is_category()) {
         echo single_cat_title();
@@ -14,10 +21,10 @@ get_header();
         the_archive_title();
       } ?></h1>
       <div class="page-banner__intro">
-        <p><?php the_archive_description(); ?></p>
+        <p><?php the_archive_description(); */?></p>
       </div>
     </div>  
-  </div>
+  </div> -->
 
 
 <div class="container container--narrow page-section">
